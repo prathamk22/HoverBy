@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPost">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        app:backgroundTint="#14af69"
+        android:layout_margin="20dp"
+        android:contentDescription="@null"
+        android:id="@+id/back"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/new_post"
+                android:textSize="50sp"
+                android:id="@+id/hello"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ask_a_new_question"
+                android:layout_marginStart="30dp"
+                android:textColor="#505050"
+                android:textSize="18sp"
+                android:id="@+id/tag"
+                android:layout_below="@+id/hello"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="350dp"
+                android:layout_below="@+id/tag"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="3dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="11dp"
+                        android:src="@drawable/ic_account_circle_black_24dp"
+                        android:id="@+id/userPic" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userid"
+                        android:textColor="#000"
+                        android:id="@+id/userId"
+                        android:textSize="18sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/userPic"
+                        android:layout_marginTop="15dp"/>
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/view"
+                        android:background="#919191" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/userPic"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="0dp"
+                        android:inputType="textMultiLine"
+                        android:textStyle="bold"
+                        android:id="@+id/editText"
+                        android:maxWidth="20dp"
+                        android:minLines="1"
+                        android:maxLength="30"
+                        android:textSize="35sp"
+                        android:background="@drawable/empty"
+                        android:hint="@string/ask_your_question"
+                        android:gravity="center|left" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        app:backgroundTint="#14af69"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:id="@+id/share"/>
+
+</RelativeLayout>

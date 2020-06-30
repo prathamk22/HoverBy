@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3d3d3d"
+    tools:context=".NoInternetConnection">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="130dp"
+            android:contentDescription="@null"
+            android:id="@+id/illustration"
+            android:src="@drawable/illustration"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whoops"
+            android:layout_below="@+id/illustration"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:id="@+id/whoops"
+            android:textColor="#FFAB40"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_internet_connection_found"
+            android:layout_below="@+id/whoops"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:id="@+id/noConnection"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/please_check_your_internet_settings"
+            android:layout_below="@+id/noConnection"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:id="@+id/settings"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settings"
+            android:layout_centerHorizontal="true"
+            android:text="@string/reload"
+            android:id="@+id/reload"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:textColor="#FFB900"
+            android:background="@drawable/btn_back" />
+    </RelativeLayout>
+
+</ScrollView>

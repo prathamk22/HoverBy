@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    app:cardElevation="2dp"
+    android:transitionName="simple_activity_transition"
+    app:cardCornerRadius="10dp">
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp">
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            android:id="@+id/option"
+            android:src="@drawable/vertical_option"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:id="@+id/view"
+            android:background="#000"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:id="@+id/profilepic"
+                android:src="@drawable/ic_action_name"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userid"
+                    android:textColor="#000"
+                    android:id="@+id/userID"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userid"
+                    android:textColor="#757575"
+                    android:id="@+id/date"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:maxWidth="20dp"
+            android:text="text is a great tool for every one here"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:id="@+id/textView"
+            android:textColor="#000"
+            android:textSize="35sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

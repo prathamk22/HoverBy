@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:src="@drawable/main_logo"
+        android:id="@+id/mainLayout"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:textSize="13sp"
+        android:textColor="#14af69"
+        android:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/mainLayout"
+        android:layout_marginLeft="15dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/image"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mainLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@null"/>
+    <TextView
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:text="@string/testing"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mainLayout"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/image"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:textSize="12sp"
+        android:textColor="#3d3d3d"
+        android:text="@string/testing_is_awecome"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/image"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="15dp" />
+</RelativeLayout>

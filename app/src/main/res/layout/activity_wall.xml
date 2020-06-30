@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WallActivity">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout" />
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_nav"
+        android:elevation="4dp"
+        android:paddingLeft="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        app:bnc_mode="packed">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/toggle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="#F95950"
+            app:bt_colorInactive="#707070"
+            app:bt_icon="@drawable/ic_donut_small_black_24dp"
+            app:bt_title="Explore"
+            app:bt_padding="10dp"
+            app:bt_showShapeAlways="true"
+            app:bt_duration="250"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:bt_titlePadding="10dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/toggle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            app:bt_colorActive="#F95950"
+            app:bt_colorInactive="#707070"
+            app:bt_icon="@drawable/ic_account_circle_black_24dp"
+            app:bt_title="Profile"
+            app:bt_duration="250"
+            app:bt_padding="10dp"
+            app:bt_titlePadding="10dp" />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</RelativeLayout>

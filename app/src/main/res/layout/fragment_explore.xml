@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    tools:context=".Explore">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_toStartOf="@id/start"
+        android:id="@+id/welcome"
+        android:layout_marginTop="25dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_back"
+            android:id="@+id/wb"
+            android:textColor="#B4B4B4"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="#000000"
+            android:id="@+id/name"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"/>
+        <android.support.v7.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            app:cardCornerRadius="2dp"
+            android:id="@+id/design"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/have_a_look"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/have"
+        android:layout_below="@+id/welcome"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="-50dp"
+        android:id="@+id/start"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="25dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginTop="13dp"
+                android:id="@+id/move"
+                android:contentDescription="@null"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/newPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true"
+                android:background="#fff"
+                android:src="@drawable/ic_add_white_24dp"
+                app:backgroundTint="#fff"
+                app:fabSize="mini" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:dsv_orientation="horizontal"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/loading"
+        android:textSize="18sp"
+        android:id="@+id/load"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/notFound"
+        android:visibility="invisible"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_404"
+            android:id="@+id/four"
+            android:gravity="center"
+            android:textSize="80sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/c_o_n_t_e_n_t_n_o_t_f_o_u_n_d"
+            android:id="@+id/found"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

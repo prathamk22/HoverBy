@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SettingsList">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_margin="20dp"
+        app:fabSize="mini"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/back"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/settings"
+        android:textSize="50sp"
+        android:id="@+id/hello"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modify_your_data_here"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="#505050"
+        android:textSize="18sp"
+        android:id="@+id/tag"
+        android:layout_below="@+id/hello"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_below="@+id/tag"
+        android:background="@null"
+        android:id="@+id/listView"/>
+</RelativeLayout>
